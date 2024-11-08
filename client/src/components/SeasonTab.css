@@ -37,22 +37,41 @@
     color : white;
 }
 
-.menuCard1, .menuCard2, .menuCard3, .menuCard4, .menuCard5 {
+.menuCard, .menuCard2 {
     display: block;
     text-align: center;
-    background-color: #17181C;
+    font-size: 0.7rem;
+    background-color: white;
+    color : #17181C;
+    border-radius: 10px;
+}
+
+.menuCard{
+    flex: 1 1 2rem;
+}
+
+.menuCard2{
+    flex: 2 3 5rem;
+}
+
+.menuContent{
+    flex: 1 1 2rem;
+}
+
+.menuContent2{
+    flex: 2 3 5rem;
+}
+
+
+.menuContent, .menuContent2 {
+    display: block;
+    text-align: center;
+    height: 2rem;
     font-size: 0.7rem;
     color : white;
     border-radius: 10px;
 }
 
-.menuCard1{
-    flex: 2 3 5rem;
-}
-
-.menuCard2, .menuCard3, .menuCard4, .menuCard5{
-    flex: 1 1 3rem;
-}
 .wrapContent{
     display: flex;
     padding: 0 1rem 0 1rem;
@@ -61,18 +80,10 @@
     align-items: center;
 }
 
-.menuContent1, .menuContent2, .menuContent3, .menuContent4, .menuContent5 {
+.dislayQualiciation{
     display: block;
-    text-align: center;
-    font-size: 0.7rem;
-    color : white;
-    border-radius: 10px;
-}
-
-.menuContent1{
-    flex: 2 3 5rem;
-}
-
-.menuContent2, .menuContent3, .menuContent4, .menuContent5 {
-    flex: 1 1 3rem;
+    color: white;
+    font-size: 0.8rem;
+    padding-left: 20px;
+    background: #17181C;
 }
