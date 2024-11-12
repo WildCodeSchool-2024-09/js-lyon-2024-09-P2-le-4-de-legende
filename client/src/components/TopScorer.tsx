@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./TopScorer.css";
+import leaguelogo from "../../public/LiguaLogo.png";
 
 interface TopScorerProps {
   player_place: number;
@@ -30,16 +31,40 @@ export default function TopScorer() {
     getTopScorer();
   }, [scorers]);
   return (
-    <div className="topscorerwrap">
-      {scorers.map((players) => (
-        <div className="infos" key={players.player_key}>
-          <p>{players.player_name}</p>
-          <p>{players.team_name}</p>
-          <p>Goals : {players.goals}</p>
-          <p>Assists : {players.assists}</p>
-          <p>Penalty goals : {players.penalty_goals}</p>
+    <section className="WrappingTab">
+      <div className="tabTittle">
+        <div>
+          <img className="LeagueLogo" src={leaguelogo} alt="logo du tableau" />
         </div>
-      ))}
-    </div>
+        <div className="wrapTittles">
+          <p className="tabMainTittle">Laliga</p>
+          <p className="tabSubTittle">Spain</p>
+        </div>
+      </div>
+
+      <div className="wrapOptions">
+        <span className="menuCard1">Rank</span>
+        <span className="menuCard2">Player name</span>
+        <span className="menuCard2">Team name</span>
+        <span className="menuCard">Goals</span>
+        <span className="menuCard">Penalty</span>
+        <span className="menuCard3">Assists</span>
+      </div>
+
+      <div className="topscorerwrap">
+        {scorers.map((players) => (
+          <div className="wrapContent" key={players.player_key}>
+            <span className="menuContent">{players.player_place}</span>
+            <span className="menuContent2">{players.player_name}</span>
+            <span className="menuContent2">{players.team_name}</span>
+            <span className="menuContent">{players.goals}</span>
+            <span className="menuContent">{players.penalty_goals}</span>
+            <span className="menuContent">
+              {players.assists ? players.assists : 0}
+            </span>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
