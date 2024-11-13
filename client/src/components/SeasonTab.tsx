@@ -89,7 +89,7 @@ function   SeasonTab()
                 <span className="menuCard">W</span>
                 <span className="menuCard">D</span>
                 <span className="menuCard">L</span>
-                <span className="menuCard">Pts</span>
+                <span className="menuCard">Pts</span> 
 
             </div>
 
@@ -112,7 +112,6 @@ function   SeasonTab()
 
             ))}
             
-
         </section>
     );
 }
