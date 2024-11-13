@@ -1,4 +1,5 @@
 import { useState,useEffect } from 'react';
+import "./TeamStats.css"
 
 
 interface TeamStatsProps {
@@ -37,7 +38,7 @@ function TeamStats({Data}:TeamStatsProps) {
   
     return (
       <>
-        <div>
+        <div className='filtre'>
           <select onChange={handleChange} name="" id="">
             {foot.map((team,index) => 
             <option key={index} value={index}>{team.team_name}</option>
@@ -46,14 +47,16 @@ function TeamStats({Data}:TeamStatsProps) {
           {foot[footIndex] && (
           <div>
           <img src={foot[footIndex].team_badge} alt="" />
-          <p>Match joués:{foot[footIndex].overall_league_payed}</p>
-          <p>Points:{foot[footIndex].overall_league_PTS}</p>
-          <p>Wins:{foot[footIndex].overall_league_W}</p>
-          <p>Defaites:{foot[footIndex].overall_league_D}</p>
-          <p>Nul:{foot[footIndex].overall_league_L}</p>
-          <p>Buts marqués:{foot[footIndex].overall_league_GF}</p>
-          <p>Buts encaissés:{foot[footIndex].overall_league_GA}</p>
-          <p>Classements:{foot[footIndex].overall_league_position}</p>
+            <div className='stats'>
+                <p>Match joués:{foot[footIndex].overall_league_payed}</p>
+                <p>Points:{foot[footIndex].overall_league_PTS}</p>
+                <p>Wins:{foot[footIndex].overall_league_W}</p>
+                <p>Defaites:{foot[footIndex].overall_league_D}</p>
+                <p>Nul:{foot[footIndex].overall_league_L}</p>
+                <p>Buts marqués:{foot[footIndex].overall_league_GF}</p>
+                <p>Buts encaissés:{foot[footIndex].overall_league_GA}</p>
+                <p>Classements:{foot[footIndex].overall_league_position}</p>
+            </div>
           </div>
         )}
           </div>
