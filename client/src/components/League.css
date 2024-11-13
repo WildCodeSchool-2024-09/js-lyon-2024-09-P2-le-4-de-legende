@@ -1,0 +1,26 @@
+.LeagueComponent {
+    display: flex;
+    justify-content: center;
+}
+
+.description {
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.LeagueElements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 1rem;
+    border: solid black;
+    border-radius: 1em;
+
+}
+
+#logo {
+    width: 9vw;
+}

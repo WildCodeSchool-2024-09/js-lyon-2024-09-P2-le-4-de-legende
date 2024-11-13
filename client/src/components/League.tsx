@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import './League.css'
 
 interface LeagueType {
     league_logo: string;
@@ -26,11 +27,13 @@ function League()
         })
     }, []);
     return (
-        <div>
+        <section className="LeagueComponent">
+        <div className="LeagueElements">
             {champ.length === 0  ? <p>loading </p> : <img id="logo" src={champ[1].league_logo} alt="img" />}
             {champ.length === 0  ? <p>loading </p> : <p className="description">{champ[1].league_name}</p>  }
             {champ.length === 0 ? <p>loading </p> : <p className="description">{champ[1].league_season}</p>  }
         </div>
+        </section>
     );
 }
 export default League;
