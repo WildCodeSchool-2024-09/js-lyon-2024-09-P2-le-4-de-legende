@@ -13,13 +13,15 @@ interface TopScorerProps {
   penalty_goals?: number;
 }
 
+const apiKey = import.meta.env.VITE_CLIENT_API_KEY;
+
 export default function TopScorer() {
   const [scorers, setScorers] = useState<TopScorerProps[]>([]);
 
   useEffect(() => {
     const getTopScorer = () => {
       fetch(
-        "https://apiv3.apifootball.com/?action=get_topscorers&league_id=302&APIkey=aec4f0534d3e6136def81d6437956ad6f296953447f6b6db94191510a064aa0e"
+        `https://apiv3.apifootball.com/?action=get_topscorers&league_id=302&APIkey=${apiKey}`
       )
         .then((response) => {
           return response.json();
