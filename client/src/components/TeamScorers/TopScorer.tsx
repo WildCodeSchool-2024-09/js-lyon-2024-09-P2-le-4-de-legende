@@ -31,7 +31,7 @@ export default function TopScorer() {
         });
     };
     getTopScorer();
-  }, [scorers]);
+  }, []);
   return (
     <section className="WrappingTabs">
       <div className="tabTittle">

@@ -1,23 +1,33 @@
 import { useState,useEffect } from 'react';
 import "./TeamStats.css"
 
+const apiKey = import.meta.env.VITE_CLIENT_API_KEY;
 
-
-
-
-
-
-
+interface FootData {
+    team_name: string;
+    team_badge: string;
+    overall_league_payed: string;
+    overall_league_PTS: string;
+    overall_league_W: string;
+    overall_league_D: string;
+    overall_league_L: string;
+    overall_league_GF: string;
+    overall_league_GA: string;
+    overall_league_position: string;
+}
 
 function TeamStats() {
-    const [foot,setMoveFlag] = useState([]);
+    const [foot,setMoveFlag] = useState<FootData[]>([]);
+
     useEffect (() =>{
-      fetch("https://apiv3.apifootball.com/?action=get_standings&league_id=302&APIkey=aec4f0534d3e6136def81d6437956ad6f296953447f6b6db94191510a064aa0e")
+      fetch(`https://apiv3.apifootball.com/?action=get_standings&league_id=302&APIkey=${apiKey}`)
         .then((response) => response.json())
         .then((data) => setMoveFlag(data));
     },[]);
+    
   const [footIndex,setFootIndex] = useState(0)
-  const handleChange = (event) => {setFootIndex(event.target.value)}
+  const handleChange = (event:any) => { 
+    setFootIndex(event.target.value)}
     return (
       <>
         <div className='filtre'>
