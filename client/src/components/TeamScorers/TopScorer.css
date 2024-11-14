@@ -1,4 +1,4 @@
-.WrappingTab {
+.WrappingTabs {
   display: flex;
   flex-direction: column;
   width: 30vw;
@@ -6,6 +6,7 @@
   border-radius: 10px;
   padding-bottom: 1rem;
 }
+
 .wrapOptions {
   display: flex;
   align-items: center;
