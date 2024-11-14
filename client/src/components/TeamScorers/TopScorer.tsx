@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./TopScorer.css";
-import leaguelogo from "../../public/LiguaLogo.png";
+import leaguelogo from "../../../public/LiguaLogo.png";
 
 interface TopScorerProps {
   player_place: number;
@@ -33,7 +33,7 @@ export default function TopScorer() {
     getTopScorer();
   }, [scorers]);
   return (
-    <section className="WrappingTab">
+    <section className="WrappingTabs">
       <div className="tabTittle">
         <div>
           <img className="LeagueLogo" src={leaguelogo} alt="logo du tableau" />

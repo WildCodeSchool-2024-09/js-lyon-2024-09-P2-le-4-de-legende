@@ -1,4 +1,4 @@
-import logonav from "../../public/logo-violet-2.png";
+import logonav from "../../../public/logo-violet-2.png";
 import "./NavBar.css";
 
 export default function NavBar() {
