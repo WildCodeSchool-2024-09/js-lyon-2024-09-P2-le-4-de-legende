@@ -60,12 +60,21 @@
 
 .menuContent2{
     flex: 2 3 5rem;
+
+    display: flex;
+    align-items : center;
+    height: 2rem;
+    font-size: 0.7rem;
+    color : white;
+    border-radius: 10px;
+    justify-content: space-evenly;
 }
 
 
-.menuContent, .menuContent2 {
-    display: block;
-    text-align: center;
+.menuContent{
+    display: flex;
+    align-items : center;
+    justify-content: center;
     height: 2rem;
     font-size: 0.7rem;
     color : white;
@@ -86,4 +95,8 @@
     font-size: 0.8rem;
     padding-left: 20px;
     background: #17181C;
+}
+
+.TeamLogoInMenu{
+    width: 2vw;
 }

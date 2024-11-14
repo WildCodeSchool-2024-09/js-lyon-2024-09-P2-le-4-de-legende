@@ -1,59 +1,47 @@
 import "./SeasonTab.css";
 import { useEffect, useState } from "react";
 
-interface FullJsonFromAPI
-{
-    result:{
-        seasons:{
-            groups:{
-                table : table_Data[];
-            }[];
-        }[];
-    }[];
-}
+interface TableData {
 
-interface table_Data
-{
-    draw : number;
-    goals_conceded : number;
-    goals_scored : number;
-    loss : number;
-    note : string; // ex champions league
-    points : number;
-    position : number;
-    team:{
-        id : number; 
-        name: string;
-    }
-    win : number;
+    table_data: Data[];
 
 }
+    
+interface Data {
+
+    overall_league_position : string;
+    overall_league_PTS : string; 
+    team_name : string; 
+    team_badge : string; 
+    overall_league_D : string; // draw 
+    overall_league_W : string; 
+    overall_league_L : string; // defeat
+
+} 
+
 
 function   SeasonTab()
 {
-    const   ApiKey = import.meta.env.VITE_API_KEY;
-    const   [SeasonTab, setSeasonTab] = useState<table_Data[]>([]);
+    const   ApiKey = import.meta.env.VITE_CLIENT_API_KEY;
+    const   [SeasonTab, setSeasonTab] = useState<TableData[]>([]);
 
     useEffect(() => {
 
-        fetch("https://soccer-football-info.p.rapidapi.com/championships/view/?i=d621ea12d91a8473&l=en_US", 
-        { 
-        headers: {
-            'x-rapidapi-key': `${ApiKey}`,
-            'x-rapidapi-host': 'soccer-football-info.p.rapidapi.com'
-        }})
-        .then((response) =>{
-
+        fetch(`https://apiv3.apifootball.com/?action=get_standings&league_id=302&APIkey=${ApiKey}`)
+        .then((response)=> {
             if(!response.ok)
+            {
                 throw new Error('Error fetching data from API');
-
+            }
             return(response.json());
         })
-        .then((data : FullJsonFromAPI) => {
-            setSeasonTab(data.result[0].seasons[4].groups[0].table);
-            console.log(SeasonTab);
+        .then((data) => {
+            setSeasonTab(data);
         })
-    
+        .catch((error) => {
+            console.error(error);
+        });
+
     }, []); 
 
     function    displayQualifacation(index :number) 
@@ -100,12 +88,12 @@ function   SeasonTab()
                     {displayQualifacation(index)}
                     < div className="wrapContent">
 
-                        <span className="menuContent">{eachTeam.position}</span>
-                        <span className="menuContent2">{eachTeam.team.name}</span>
-                        <span className="menuContent">{eachTeam.win}</span>
-                        <span className="menuContent">{eachTeam.draw}</span>
-                        <span className="menuContent">{eachTeam.loss}</span>
-                        <span className="menuContent">{eachTeam.points}</span>
+                        <span className="menuContent">{eachTeam.overall_league_position}</span>
+                        <span className="menuContent2"> <img className="TeamLogoInMenu" src={eachTeam.team_badge} alt="team logo" />{eachTeam.team_name}</span>
+                        <span className="menuContent">{eachTeam.overall_league_W}</span>
+                        <span className="menuContent">{eachTeam.overall_league_D}</span>
+                        <span className="menuContent">{eachTeam.overall_league_L}</span>
+                        <span className="menuContent">{eachTeam.overall_league_PTS}</span>
                     </div>
 
                 </div>
