@@ -16,7 +16,7 @@ export default function Video() {
   useEffect(() => {
     const getVideo = () => {
       fetch(
-        `https://apiv3.apifootball.com/?action=get_videos&match_id=206&APIkey=${apiKey}`
+        `https://apiv3.apifootball.com/?action=get_videos&match_id=206376&APIkey=${apiKey}`
       )
         .then((response) => {
           return response.json();
