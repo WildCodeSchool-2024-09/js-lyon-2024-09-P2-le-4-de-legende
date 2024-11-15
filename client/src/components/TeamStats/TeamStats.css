@@ -1,0 +1,44 @@
+#logoFiltre{
+    width: 5vw;
+    height: 5vw;
+    margin-top: 5vw;
+}
+
+
+
+select{
+    color:antiquewhite;
+    background-color: #2E3039;
+    width: 13vw;
+}
+
+.p-stats{
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+}
+
+.stats{
+  padding: 20px;
+  font-style: italic;
+  caption-side: bottom;
+  
+  letter-spacing: 1px;
+}
+
+.filtre{
+    font-family: "Rock Salt", cursive;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    background-color: #2E3039;
+    border-radius: 10px;
+    padding-bottom: 1rem;
+    color: antiquewhite;
+    width: 30vw;
+}
+
+.logo-stats{
+    display: flex;
+    flex-direction: row;
+}

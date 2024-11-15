@@ -1,0 +1,91 @@
+.WrappingTabs {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  background-color: #2e3039;
+  border-radius: 10px;
+  padding-bottom: 1rem;
+}
+
+.wrapOptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem 0 1rem;
+  background-color: rgba(102, 51, 153, 255);
+  border-radius: 8px 8px;
+}
+.LeagueLogo {
+  width: 5vw;
+}
+.tabTittle {
+  display: flex;
+}
+.tabMainTittle {
+  font-size: 1.2rem;
+}
+.tabSubTittle {
+  font-size: 0.7rem;
+}
+.wrapTittles {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-top: 1.25rem;
+}
+.menuCard,
+.menuCard1,
+.menuCard2,
+.menuCard3 {
+  display: block;
+  text-align: center;
+  font-size: 0.7rem;
+  color: white;
+}
+
+.menuCard {
+  flex: 1 1 2rem;
+}
+
+.menuCard1 {
+  border-radius: 10px 0 0 10px;
+}
+
+.menuCard2 {
+  flex: 2 3 5rem;
+}
+
+.menuCard3 {
+  border-radius: 0 10px 10px 0;
+}
+.menuContent {
+  flex: 1 1 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menuContent2 {
+  flex: 2 3 5rem;
+}
+.menuContent,
+.menuContent2 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: white;
+}
+.wrapContent {
+  display: flex;
+  height: 2rem;
+  height: 2rem;
+  align-items: center;
+}
+.topscorerwrap {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  background: #17181c;
+}
