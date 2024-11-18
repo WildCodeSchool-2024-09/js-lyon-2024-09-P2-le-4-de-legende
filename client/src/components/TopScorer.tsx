@@ -13,7 +13,7 @@ interface TopScorerProps {
   penalty_goals?: number;
 }
 
-const apiKey = import.meta.env.VITE_CLIENT_API_KEY;
+const apiKey = import.meta.env.VITE_CLIENT_API_KEY_FOOT;
 
 export default function TopScorer() {
   const [scorers, setScorers] = useState<TopScorerProps[]>([]);
@@ -31,7 +31,7 @@ export default function TopScorer() {
         });
     };
     getTopScorer();
-  }, [scorers]);
+  }, []);
   return (
     <section className="WrappingTab">
       <div className="tabTittle">

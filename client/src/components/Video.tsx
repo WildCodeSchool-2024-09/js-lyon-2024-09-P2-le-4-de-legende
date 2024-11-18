@@ -8,7 +8,7 @@ interface VideoProps {
   video_url: string;
 }
 
-const apiKey = import.meta.env.VITE_CLIENT_API_KEY;
+const apiKey = import.meta.env.VITE_CLIENT_API_KEY_FOOT;
 
 export default function Video() {
   const [video, setVideo] = useState<VideoProps[]>([]);
@@ -26,7 +26,7 @@ export default function Video() {
         });
     };
     getVideo();
-  }, [video]);
+  }, []);
   return (
     <div className="videoshow">
       {video.map((start) => (
