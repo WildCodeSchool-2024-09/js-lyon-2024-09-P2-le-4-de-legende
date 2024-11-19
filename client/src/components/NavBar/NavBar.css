@@ -6,7 +6,7 @@ nav {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.876);
   color: white;
-  border-bottom: 0.5rem solid rgba(102, 51, 153, 255);
+  border-bottom: 0.3rem solid rgba(102, 51, 153, 255);
 }
 
 nav ul {
@@ -24,5 +24,22 @@ nav ul {
 
 #logonav {
   margin-left: 2%;
-  height: 90%;
+  height: 50px;
+}
+
+.WrappLogoTitle{
+    display: flex;
+    background: rgb(2,0,36);
+    background: linear-gradient(159deg, rgba(2,0,36,1) 5%, rgba(9,9,38,1) 50%, rgba(102,51,153,1) 98%);
+    align-items: center;
+    height: 100%;
+}
+
+.AppName{
+    font-weight: 800;
+    padding: 0 2rem 0 1rem;
+}
+
+.MenuList{
+    color: #a0a0a0;
 }
