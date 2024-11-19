@@ -26,7 +26,7 @@ export default function Video() {
         });
     };
     getVideo();
-  }, [video]);
+  }, []);
   return (
     <div className="videoshow">
       {video.map((start) => (
