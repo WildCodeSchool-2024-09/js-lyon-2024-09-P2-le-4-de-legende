@@ -22,9 +22,11 @@ function League()
         })
         .then((data) => {
             setChamp(data);
-            console.log(champ);
-            console.log(champ[1]);
         })
+        .catch((error)=>{
+            console.error(error);
+        });
+
     }, []);
     return (
         <section className="LeagueComponent">

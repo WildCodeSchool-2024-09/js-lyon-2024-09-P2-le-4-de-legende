@@ -1,5 +1,6 @@
 import { useState,useEffect } from 'react';
 import "./TeamStats.css"
+import leaguelogo from "../../../public/LiguaLogo.png";
 
 const apiKey = import.meta.env.VITE_CLIENT_API_KEY;
 
@@ -22,7 +23,10 @@ function TeamStats() {
     useEffect (() =>{
       fetch(`https://apiv3.apifootball.com/?action=get_standings&league_id=302&APIkey=${apiKey}`)
         .then((response) => response.json())
-        .then((data) => setMoveFlag(data));
+        .then((data) => setMoveFlag(data))
+        .catch((error)=>{
+          console.error(error);
+        });
     },[]);
     
   const [footIndex,setFootIndex] = useState(0)
@@ -31,24 +35,31 @@ function TeamStats() {
     return (
       <>
         <div className='filtre'>
-            <h1>Team Stats</h1>
-          <select onChange={handleChange} name="" id="">
+        <div className="tabTittle">
+        <img className="LeagueLogo" src={leaguelogo} alt="logo du tableau" />
+            <h1 id='title'>Team Stats</h1>
+            </div>
+            <div className='back-select'>
+          <select onChange={handleChange} name="" id="select">
             {foot.map((team,index) => 
             <option key={index} value={index}>{team.team_name}</option>
             )}
           </select>
+          </div>
           {foot[footIndex] && (
           <div className='logo-stats'>
+            <div className='logo-et-stats'>
           <img id='logoFiltre' src={foot[footIndex].team_badge} alt="logo du club" />
-            <div className='stats'>
-                <p className='p-stats' >Matchs joués:<span>{foot[footIndex].overall_league_payed}</span></p>
-                <p className='p-stats'>Points:<span>{foot[footIndex].overall_league_PTS}</span></p>
-                <p className='p-stats'>Wins:<span>{foot[footIndex].overall_league_W}</span></p>
-                <p className='p-stats'>Defaites:<span>{foot[footIndex].overall_league_D}</span></p>
-                <p className='p-stats'>Nul:<span>{foot[footIndex].overall_league_L}</span></p>
-                <p className='p-stats'>Buts marqués:<span>{foot[footIndex].overall_league_GF}</span></p>
-                <p className='p-stats'>Buts encaissés:<span>{foot[footIndex].overall_league_GA}</span></p>
-                <p className='p-stats'>Classements:<span>{foot[footIndex].overall_league_position}</span></p>
+              <div className='stats'>
+                  <p className='p-stats' >Matchs joués:<span>{foot[footIndex].overall_league_payed}</span></p>
+                  <p className='p-stats'>Points:<span>{foot[footIndex].overall_league_PTS}</span></p>
+                  <p className='p-stats'>Wins:<span>{foot[footIndex].overall_league_W}</span></p>
+                  <p className='p-stats'>Defaites:<span>{foot[footIndex].overall_league_D}</span></p>
+                  <p className='p-stats'>Nul:<span>{foot[footIndex].overall_league_L}</span></p>
+                  <p className='p-stats'>Buts marqués:<span>{foot[footIndex].overall_league_GF}</span></p>
+                  <p className='p-stats'>Buts encaissés:<span>{foot[footIndex].overall_league_GA}</span></p>
+                  <p className='p-stats'>Classements:<span>{foot[footIndex].overall_league_position}</span></p>
+              </div>
             </div>
           </div>
         )}

@@ -23,6 +23,7 @@ interface Data {
 function   SeasonTab()
 {
     const   ApiKey = import.meta.env.VITE_CLIENT_API_KEY;
+    const   LiguaLogo = "LiguaLogo.png";
     const   [SeasonTab, setSeasonTab] = useState<TableData[]>([]);
 
     useEffect(() => {
@@ -60,7 +61,7 @@ function   SeasonTab()
             <div className="tabTittle">
 
                 <div>
-                    <img  className="LeagueLogo" src="LiguaLogo.png" alt="logo_league" />
+                    <img  className="LeagueLogo" src={LiguaLogo} alt="logo_league" />
                 </div>
 
                 <div className="wrapTittles">
