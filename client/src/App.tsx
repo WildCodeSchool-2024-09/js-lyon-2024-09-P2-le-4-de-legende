@@ -5,7 +5,7 @@ import TopScorer from "./components/TeamScorers/TopScorer";
 import League from "./components/League/League";
 import Footer from "./components/Footer/Footer";
 //import TeamStats from "./components/TeamStats/TeamStats";
-import SeasonTab from "./components/SeasonTab";
+//import SeasonTab from "./components/SeasonTab";
 
 export default function App() {
   return (
@@ -14,17 +14,28 @@ export default function App() {
       <League />
 
       <div className="document">
-          <div className="lateralNavbar" >
+          <div className="lateralNavbar">
             <p className="lateralNavbaTitle">NAVIGATION</p>
-            <button className="lateralNavbaButton">Top Scorer</button>
-            <button className="lateralNavbaButton">Team Statistics</button>
-            <button className="lateralNavbaButton">Team Statistics</button>
-          </div>
 
+            <button className="lateralNavbaButton" type="button"> 
+               <img className="imgNavbar" src="/world-cup.png"/>
+               <p className="textNavbar">Top Scorer</p>
+            </button>
+
+            <button className="lateralNavbaButton" type="button">
+              <img className="imgNavbar" src="/rankingICON.png"/>
+              <p className="textNavbar">Classement</p>
+            </button>
+
+            <button className="lateralNavbaButton" type="button">
+              <img className="imgNavbar" src="/top-scorer.png"/>
+              <p className="textNavbar">Team Stat</p>
+            </button>
+
+          </div>
           
             <div className="MainWrapper">
               <TopScorer />
-              
             </div >
           
           

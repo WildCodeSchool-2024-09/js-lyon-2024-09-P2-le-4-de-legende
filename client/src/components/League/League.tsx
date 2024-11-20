@@ -32,7 +32,7 @@ function League()
         <section className="LeagueComponent">
 
             <div className="WrapComponentLeague">
-                <h1 className="TitleLeagueComponent">VIVEZ LE MEILLEUR <br /> DE LA LIGUA</h1>
+                <h1 className="TitleLeagueComponent">VIVEZ LE MEILLEUR <br /> DE LA LIGA</h1>
                 <p className="CommentLeagueComponent">Suivez vos équipes préférés, le classement, les statistiques et bien plus encore ...</p>
             </div>
             

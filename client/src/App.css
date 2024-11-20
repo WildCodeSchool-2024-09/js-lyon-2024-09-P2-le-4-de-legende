@@ -43,8 +43,8 @@ body {
     background: black;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 2rem 0 1rem;
+    gap: 1rem;
+    padding: 2rem 1rem 0 1rem;
     border-top: 0.3rem solid rgba(102, 51, 153, 255);
 }
 
@@ -53,7 +53,36 @@ body {
   color: white;
 }
 
+/* Remove all decoration*/
 .lateralNavbaButton{
-
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
+
+.lateralNavbaButton {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+  padding: 0.3rem 2rem 0.3rem 2rem;
+  border-radius: 5px;
+  
+}
+
+.lateralNavbaButton:hover {
+  background-color: #663399;
+}
+
+
+.textNavbar{
+    white-space: nowrap;
+    font-family: "Arvo", serif;
+    color: white;
+}
