@@ -22,7 +22,10 @@ function TeamStats() {
     useEffect (() =>{
       fetch(`https://apiv3.apifootball.com/?action=get_standings&league_id=302&APIkey=${apiKey}`)
         .then((response) => response.json())
-        .then((data) => setMoveFlag(data));
+        .then((data) => setMoveFlag(data))
+        .catch((error)=>{
+          console.error(error);
+        });
     },[]);
     
   const [footIndex,setFootIndex] = useState(0)
