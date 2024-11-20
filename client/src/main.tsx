@@ -7,6 +7,12 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
+import NavBar from "./components/NavBar/NavBar";
+import League from "./components/League/League";
+import TopScorer from "./components/TeamScorers/TopScorer";
+import Footer from "./components/Footer/Footer";
+import TeamStats from "./components/TeamStats/TeamStats";
+import SeasonTab from "./components/SeasonTab";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -20,8 +26,22 @@ import App from "./App";
 // You can add more routes as you build out your app!
 const router = createBrowserRouter([
   {
-    path: "/", // The root path
-    element: <App />, // Renders the App component for the home page
+     // The root path
+    element: <App />,
+    children: [
+      {
+      path: "/",
+      element: <TopScorer/>,
+    },
+    {
+      path: "/TeamStats",
+      element: <TeamStats/>,
+    },
+    {
+      path: "/SeasonTab",
+      element: <SeasonTab/>,
+    },
+    ] // Renders the App component for the home page
   },
   // Try adding a new route! For example, "/about" with an About component
 ]);
