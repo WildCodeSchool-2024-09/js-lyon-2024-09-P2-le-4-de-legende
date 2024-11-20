@@ -1,10 +1,11 @@
 .WrappingTabs {
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
-  background-color: #2e3039;
-  border-radius: 10px;
-  padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    background-color: #2e3039;
+    border-radius: 10px;
+    padding-bottom: 1rem;
+    margin: 2rem 0 2rem 0;
 }
 
 .wrapOptions {
