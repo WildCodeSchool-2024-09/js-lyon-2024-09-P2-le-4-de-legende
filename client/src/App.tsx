@@ -1,18 +1,40 @@
 import "./App.css";
-import NavBar from "./components/NavBar";
-import TopScorer from "./components/TopScorer";
+import NavBar from "./components/NavBar/NavBar";
+import TopScorer from "./components/TopScorers/TopScorer";
+import Video from "./components/Video/Video";
+import League from "./components/League/League";
+import Footer from "./components/Footer/Footer";
+import TeamStats from "./components/TeamStats/TeamStats";
+import SeasonTab from "./components/SeasonTab";
 import YouTube from "./components/YouTube/YouTube";
-import Video from "./components/Video";
-import Footer from "./components/Footer";
+import LigaTV from "./components/LigaTV/LigaTV";
 
 export default function App() {
   return (
-    <div className="document">
+    <>
+      <LigaTV />
+
+      {/*
       <NavBar />
-      <TopScorer />
-      <YouTube />
-      <Video />
+      <League />
+
+      <div className="document">
+        <div className="MainWrapper">
+          <TopScorer />
+          <TeamStats />
+          <SeasonTab />
+        </div>
+
+        <div className="videoWrapper">
+          <Video />
+        </div>
+
+        <div>
+          <YouTube />
+        </div>
+      </div>
       <Footer />
-    </div>
+    */}
+    </>
   );
 }
