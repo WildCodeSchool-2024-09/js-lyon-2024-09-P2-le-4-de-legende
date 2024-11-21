@@ -6,15 +6,12 @@ import League from "./components/League/League";
 import Footer from "./components/Footer/Footer";
 import TeamStats from "./components/TeamStats/TeamStats";
 import SeasonTab from "./components/SeasonTab";
-import YouTube from "./components/YouTube/YouTube";
 import LigaTV from "./components/LigaTV/LigaTV";
 
 export default function App() {
   return (
     <>
       <LigaTV />
-
-      {/*
       <NavBar />
       <League />
 
@@ -30,11 +27,10 @@ export default function App() {
         </div>
 
         <div>
-          <YouTube />
+          <LigaTV />
         </div>
       </div>
       <Footer />
-    */}
     </>
   );
 }
