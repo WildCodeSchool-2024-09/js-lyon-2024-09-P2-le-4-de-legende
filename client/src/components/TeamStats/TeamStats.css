@@ -1,12 +1,10 @@
 
 
 #logoFiltre{
-    width: 20vw;
-    height: 20vw;
-    margin-top: 5vw;
+    width: 15vw;
     display: flex;
     justify-content: center;
-
+    margin: 5%;
 }
 
 .back-select{
@@ -48,9 +46,16 @@
     width: 30vw;
 }
 
-.logo-stats{
+.logo-et-stats {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.logo-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
