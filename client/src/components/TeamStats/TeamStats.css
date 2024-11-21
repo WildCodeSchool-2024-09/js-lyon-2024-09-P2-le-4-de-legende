@@ -1,8 +1,12 @@
+
+
 #logoFiltre{
     width: 20vw;
     height: 20vw;
     margin-top: 5vw;
-    margin-left: 20%;
+    display: flex;
+    justify-content: center;
+
 }
 
 .back-select{
@@ -29,7 +33,7 @@
   caption-side: bottom;
   background-color: #17181c;
   letter-spacing: 1px;
-  margin-left: 20%;
+
 }
 
 .filtre{
@@ -46,6 +50,7 @@
 
 .logo-stats{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
