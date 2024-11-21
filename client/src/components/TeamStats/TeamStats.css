@@ -1,14 +1,26 @@
+
+
 #logoFiltre{
-    width: 5vw;
-    height: 5vw;
-    margin-top: 5vw;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
+.tabTittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-select{
+    background-color: #663399;
 }
 
 
-
-select{
+#select{
     color:antiquewhite;
-    background-color: #2E3039;
+    background-color: #663399;
     width: 13vw;
 }
 
@@ -19,15 +31,17 @@ select{
 }
 
 .stats{
+    width: 100%;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;
-  
+  background-color: #17181c;
   letter-spacing: 1px;
+
 }
 
 .filtre{
-    font-family: "Rock Salt", cursive;
+    font-size: 0.7rem;
     display: flex;
     flex-direction: column;
     width: 60vw;
@@ -38,7 +52,16 @@ select{
     width: 30vw;
 }
 
-.logo-stats{
+.logo-et-stats {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }

@@ -45,7 +45,7 @@ export default function TopScorer() {
           <img className="LeagueLogo" src={leaguelogo} alt="logo du tableau" />
         </div>
         <div className="wrapTittles">
-          <p className="tabMainTittle">Laliga</p>
+          <p className="tabMainTittle">Liga</p>
           <p className="tabSubTittle">Spain</p>
         </div>
       </div>
