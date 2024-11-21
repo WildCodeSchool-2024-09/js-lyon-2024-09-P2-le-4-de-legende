@@ -13,7 +13,7 @@ interface TopScorerProps {
   penalty_goals?: number;
 }
 
-const apiKey = import.meta.env.VITE_CLIENT_API_KEY;
+const apiKey = import.meta.env.VITE_CLIENT_API_KEY_FOOT;
 
 export default function TopScorer() {
   const [scorers, setScorers] = useState<TopScorerProps[]>([]);
@@ -45,7 +45,7 @@ export default function TopScorer() {
           <img className="LeagueLogo" src={leaguelogo} alt="logo du tableau" />
         </div>
         <div className="wrapTittles">
-          <p className="tabMainTittle">Liga</p>
+          <p className="tabMainTittle">Laliga</p>
           <p className="tabSubTittle">Spain</p>
         </div>
       </div>
@@ -68,7 +68,7 @@ export default function TopScorer() {
             <span className="menuContent">{players.goals}</span>
             <span className="menuContent">{players.penalty_goals}</span>
             <span className="menuContent">
-              {players.assists !== "" ? players.assists : "0"}
+              {players.assists ? players.assists : 0}
             </span>
           </div>
         ))}
