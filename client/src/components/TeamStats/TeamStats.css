@@ -7,6 +7,12 @@
     margin: 5%;
 }
 
+.tabTittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .back-select{
     background-color: #663399;
 }
