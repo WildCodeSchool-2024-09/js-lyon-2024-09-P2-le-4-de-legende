@@ -13,7 +13,7 @@ interface TopScorerProps {
   penalty_goals?: number;
 }
 
-const apiKey = import.meta.env.VITE_CLIENT_API_KEY;
+const apiKey = import.meta.env.VITE_CLIENT_API_KEY_FOOT;
 
 export default function TopScorer() {
   const [scorers, setScorers] = useState<TopScorerProps[]>([]);
@@ -28,10 +28,16 @@ export default function TopScorer() {
         })
         .then((data) => {
           setScorers(data);
+          console.log(scorers);
+        })
+        .catch((error) => {
+          console.error(error);
         });
     };
+
     getTopScorer();
-  }, [scorers]);
+  }, []);
+
   return (
     <section className="WrappingTabs">
       <div className="tabTittle">
@@ -39,7 +45,7 @@ export default function TopScorer() {
           <img className="LeagueLogo" src={leaguelogo} alt="logo du tableau" />
         </div>
         <div className="wrapTittles">
-          <p className="tabMainTittle">Laliga</p>
+          <p className="tabMainTittle">Liga</p>
           <p className="tabSubTittle">Spain</p>
         </div>
       </div>

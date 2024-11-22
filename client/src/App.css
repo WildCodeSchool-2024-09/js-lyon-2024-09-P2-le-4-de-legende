@@ -5,7 +5,10 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  /*font-family: "Lato", sans-serif;*/
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   height: 100vh;
   
   font-size: 16px;
@@ -22,17 +25,64 @@ body {
 
 .document{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.876);
 }
 
 .MainWrapper{
   display: flex;
-  align-items :  flex-start;
+  width: 100%;
   justify-content: center;
-  gap : 1rem; 
 }
 
 .videoWrapper{
   padding-top: 3rem;
 }
 
+.lateralNavbar{
+    background: black;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 1rem 0 1rem;
+    border-top: 0.3rem solid rgba(102, 51, 153, 255);
+}
+
+.lateralNavbaTitle{
+  font-family: "Arvo", serif;
+  color: white;
+}
+
+/* Remove all decoration*/
+.lateralNavbaButton{
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+
+.lateralNavbaButton {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+  padding: 0.3rem 2rem 0.3rem 2rem;
+  border-radius: 5px;
+  
+}
+
+.lateralNavbaButton:hover {
+  background-color: #663399;
+}
+
+
+.textNavbar{
+    white-space: nowrap;
+    font-family: "Arvo", serif;
+    color: white;
+}
