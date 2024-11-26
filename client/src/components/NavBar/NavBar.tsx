@@ -1,5 +1,6 @@
-import logonav from "../../../public/LiguaLogo.png";
+import logonav from "../../../public/LigaLogo.png";
 import "./NavBar.css";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
@@ -9,11 +10,6 @@ export default function NavBar() {
           <img id="logonav" src={logonav} alt="logo nav" />
           <p className="AppName">Foot4Legend</p>
         </div>
-        <ul className="MenuList">
-          <li>Accueil</li>
-          <li>Match</li>
-          <li>Classement</li>
-        </ul>
       </nav>
     </div>
   );

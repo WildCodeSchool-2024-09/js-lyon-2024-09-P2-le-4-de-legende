@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./TopScorer.css";
-import leaguelogo from "../../../public/LiguaLogo.png";
+import leaguelogo from "../../../public/LigaLogo.png";
 
 interface TopScorerProps {
   player_place: number;
