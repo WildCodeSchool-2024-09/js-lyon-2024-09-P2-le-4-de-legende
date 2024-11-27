@@ -1,9 +1,7 @@
 import "./SeasonTab.css";
 import { useEffect, useState } from "react";
+import leaguelogo from "../../../public/LigaLogo.png";
 
-interface TableData {
-  table_data: Data[];
-}
 
 interface Data {
   overall_league_position: string;
@@ -17,8 +15,7 @@ interface Data {
 
 function SeasonTab() {
   const ApiKey = import.meta.env.VITE_CLIENT_API_KEY_FOOT;
-  const LiguaLogo = "LiguaLogo.png";
-  const [SeasonTab, setSeasonTab] = useState<TableData[]>([]);
+  const [SeasonTab, setSeasonTab] = useState<Data[]>([]);
 
   useEffect(() => {
     fetch(
@@ -55,7 +52,7 @@ function SeasonTab() {
     <section className="WrappingTabs">
       <div className="tabTittle">
         <div>
-          <img className="LeagueLogo" src={LiguaLogo} alt="logo_league" />
+          <img className="LeagueLogo" src={leaguelogo} alt="logo_league" />
         </div>
 
         <div className="wrapTittles">
@@ -80,15 +77,15 @@ function SeasonTab() {
             <span className="menuContent">
               {eachTeam.overall_league_position}
             </span>
-            <span className="menuContent2">
-              {" "}
-              <img
-                className="TeamLogoInMenu"
-                src={eachTeam.team_badge}
-                alt="team logo"
-              />
-              {eachTeam.team_name}
-            </span>
+              <span className="menuContent2">
+                {" "}
+                <img
+                  className="TeamLogoInMenu"
+                  src={eachTeam.team_badge}
+                  alt="team logo"
+                />
+                {eachTeam.team_name}
+              </span>
             <span className="menuContent">{eachTeam.overall_league_W}</span>
             <span className="menuContent">{eachTeam.overall_league_D}</span>
             <span className="menuContent">{eachTeam.overall_league_L}</span>

@@ -28,7 +28,6 @@ export default function TopScorer() {
         })
         .then((data) => {
           setScorers(data);
-          console.log(scorers);
         })
         .catch((error) => {
           console.error(error);

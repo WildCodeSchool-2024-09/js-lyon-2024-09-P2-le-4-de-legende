@@ -26,13 +26,15 @@ body {
 .document {
   display: flex;
   flex-direction: row;
-  background-color: rgba(0, 0, 0, 0.876);
+  background-color: #000000df;
 }
 
 .MainWrapper {
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: flex-start;
+
 }
 
 .videoWrapper {
@@ -44,7 +46,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 2rem 1rem 0 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   border-top: 0.3rem solid rgba(102, 51, 153, 255);
 }
 
@@ -65,23 +67,36 @@ body {
 }
 
 .lateralNavbaButton {
+  width: 100%;
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   outline: none;
   padding: 0.3rem 2rem 0.3rem 2rem;
   border-radius: 5px;
 }
 
-.lateralNavbaButton:hover {
-  background-color: #663399;
+.lateralNavbaButton:focus {
+  /*background-color: #663399;*/
+  background: linear-gradient(159deg, rgba(2, 0, 36, 1) 5%, rgba(9, 9, 38, 1) 50%, rgba(102, 51, 153, 1) 98%);
 }
 
 .textNavbar {
   white-space: nowrap;
   font-family: "Arvo", serif;
   color: white;
+}
+
+.buttonresponsive {
+  width: 100%;
+  background: #2e3039;
+  border-radius: 10px;
+}
+
+.imgNavbar {
+  width: 1rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -105,5 +120,7 @@ body {
   }
   .MainWrapper {
     margin: 1rem 0 1rem 0;
+    height: inherit;
+
   }
 }

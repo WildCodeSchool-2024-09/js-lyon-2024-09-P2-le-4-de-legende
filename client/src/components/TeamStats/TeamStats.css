@@ -17,16 +17,17 @@
 #select {
   color: antiquewhite;
   background-color: #663399;
-  width: 40%;
+  width: 30%;
+  margin-left: 2rem;
 }
 
 .p-stats {
   display: flex;
   justify-content: space-between;
-  width: 20vw;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
+  gap: 3rem;
   color: white;
 }
 
@@ -53,7 +54,7 @@
 
 .logo-et-stats {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
@@ -71,6 +72,7 @@
   font-weight: 300;
   font-style: normal;
   font-size: 1.2rem;
+  padding-left: 2rem;
 }
 @media screen and (max-width: 600px) {
   .logo-et-stats {

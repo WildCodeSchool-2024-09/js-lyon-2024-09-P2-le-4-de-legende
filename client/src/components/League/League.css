@@ -83,10 +83,6 @@
   flex-direction: column;
 }
 
-.imgNavbar {
-  width: 2vw;
-}
-
 @media screen and (max-width: 600px) {
   .LeagueCard {
     display: none;
