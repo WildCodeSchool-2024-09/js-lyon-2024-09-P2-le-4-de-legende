@@ -16,15 +16,19 @@
   background-color: rgba(102, 51, 153, 255);
   border-radius: 8px 8px;
 }
+
 .LeagueLogo {
   width: 5vw;
 }
+
 .tabTittle {
   display: flex;
 }
+
 .tabMainTittle {
   font-size: 1.2rem;
 }
+
 .tabSubTittle {
   font-size: 0.7rem;
 }
@@ -32,7 +36,6 @@
   display: flex;
   flex-direction: column;
   color: white;
-  padding-top: 1.25rem;
 }
 .menuCard,
 .menuCard1,

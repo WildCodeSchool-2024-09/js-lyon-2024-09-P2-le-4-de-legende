@@ -52,7 +52,7 @@ function SeasonTab() {
   }
 
   return (
-    <section className="WrappingTab">
+    <section className="WrappingTabs">
       <div className="tabTittle">
         <div>
           <img className="LeagueLogo" src={LiguaLogo} alt="logo_league" />

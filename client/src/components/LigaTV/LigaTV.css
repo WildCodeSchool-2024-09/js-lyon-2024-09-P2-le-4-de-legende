@@ -86,3 +86,9 @@
   font-size: 0.9rem;
   color: #888;
 }
+
+@media screen and (max-width: 600px) {
+  .liga-container {
+    padding: inherit;
+  }
+}

@@ -1,5 +1,5 @@
-.WrappingTab {
-  display: flex;
+.WrappingTabs {
+  display: flex
   flex-direction: column;
   width: 80%;
   background-color: #2e3039;
@@ -41,9 +41,9 @@
   display: block;
   text-align: center;
   font-size: 0.7rem;
-  background-color: white;
   color: #17181c;
   border-radius: 10px;
+  color: white;
 }
 
 .menuCard {
