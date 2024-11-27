@@ -9,7 +9,7 @@ export default function Footer() {
       </div>
 
       <div>
-        <p>Retrouvez-nous sur Instagram et tout le bordel</p>
+        <p>Rejoignez-nous sur Instagram et suivez toute notre actualité</p>
       </div>
       <div>
         <img id="logofooter" src={logofooter} alt="logo du footer" />
