@@ -2,7 +2,6 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import League from "./components/League/League";
 import Footer from "./components/Footer/Footer";
-import LigaTV from "./components/LigaTV/LigaTV";
 import { Link, Outlet } from "react-router-dom";
 
 export default function App() {
