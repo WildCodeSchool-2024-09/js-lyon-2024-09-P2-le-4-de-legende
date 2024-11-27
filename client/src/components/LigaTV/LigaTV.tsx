@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
+import "./LigaTV.css"; // Import du fichier CSS
 
 export default function LigaTV() {
   const [videos, setVideos] = useState([]);
-  const [selectedVideoId, setSelectedVideoId] = useState(null); // Pour suivre la vidéo sélectionnée
-
+  const [selectedVideoId, setSelectedVideoId] = useState(null);
   const apiKeyYouTube = import.meta.env.VITE_CLIENT_API_KEY_YOUTUBE;
   const playListId = "PLXFgV2VAD0ElQmaD8KIpZAMMObnfCdneB";
 
@@ -14,7 +14,6 @@ export default function LigaTV() {
           `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&playlistId=${playListId}&maxResults=40&key=${apiKeyYouTube}`
         );
         const data = await response.json();
-
         if (data.items) {
           setVideos(data.items);
         } else {
@@ -24,69 +23,57 @@ export default function LigaTV() {
         console.error("Erreur lors de la récupération de la playlist :", error);
       }
     };
-
     getLigaPlayList();
   }, [playListId, apiKeyYouTube]);
 
   return (
-    <div>
-      <h1>Liga TV</h1>
-
+    <div className="liga-container">
+      <h1 className="liga-title">Liga TV</h1>
       {/* Section du lecteur intégré */}
-      <div style={{ marginBottom: "30px" }}>
-        {selectedVideoId ? (
-          <div
-            style={{
-              position: "relative",
-              paddingBottom: "56.25%",
-              height: 0,
-              overflow: "hidden",
-            }}
-          >
+      <div className="video-player-container">
+        {selectedVideoId && typeof selectedVideoId === "string" ? (
+          <div className="iframe-wrapper">
             <iframe
               src={`https://www.youtube.com/embed/${selectedVideoId}`}
               title="Lecteur vidéo YouTube"
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                border: "none",
-              }}
+              className="iframe-video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
           </div>
         ) : (
-          <p>Sélectionnez une vidéo pour la visionner.</p>
+          <p className="select-message">
+            Sélectionnez une vidéo pour la visionner.
+          </p>
         )}
       </div>
-
       {/* Section des miniatures */}
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
+      <div className="thumbnails-container">
         {videos.map((video, index) => {
           const snippet = video.snippet || {};
           const thumbnails = snippet.thumbnails || {};
           const medium = thumbnails.medium || {};
           const videoId = video.contentDetails?.videoId;
-
           return (
             <div
               key={index}
-              style={{ width: "300px", cursor: "pointer" }}
-              onClick={() => setSelectedVideoId(videoId)} // Définit l'ID de la vidéo à afficher
+              className="thumbnail-item"
+              onClick={() => setSelectedVideoId(videoId)}
             >
               {medium.url ? (
                 <img
                   src={medium.url}
                   alt={snippet.title || "Pas de titre"}
-                  style={{ width: "100%" }}
+                  className="thumbnail-image"
                 />
               ) : (
-                <p>Aucune miniature disponible</p>
+                <p className="no-thumbnail-message">
+                  Aucune miniature disponible
+                </p>
               )}
-              <h3>{snippet.title || "Titre non disponible"}</h3>
+              <h3 className="thumbnail-title">
+                {snippet.title || "Titre non disponible"}
+              </h3>
             </div>
           );
         })}

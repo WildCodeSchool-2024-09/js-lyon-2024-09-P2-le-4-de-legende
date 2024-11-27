@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./TeamStats.css";
-import leaguelogo from "../../../public/LiguaLogo.png";
+import leaguelogo from "../../../public/LigaLogo.png";
 
 const apiKey = import.meta.env.VITE_CLIENT_API_KEY_FOOT;
 
