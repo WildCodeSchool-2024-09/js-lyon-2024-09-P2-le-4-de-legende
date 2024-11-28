@@ -1,4 +1,4 @@
-import logonav from "../../../public/LigaLogo.png";
+import LogoNav from "../../../public/LigaLogo.png";
 import "./NavBar.css";
 
 export default function NavBar() {
@@ -6,7 +6,7 @@ export default function NavBar() {
     <div className="navbar">
       <nav>
         <div className="WrappLogoTitle">
-          <img id="logonav" src={logonav} alt="logo nav" />
+          <img id="logonav" src={LogoNav} alt="logo nav" />
           <p className="AppName">Foot4Legend</p>
         </div>
       </nav>

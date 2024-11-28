@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./LigaTV.css"; // Import du fichier CSS
+import "./LigaTV.css"; 
 
 export default function LigaTV() {
   const [videos, setVideos] = useState([]);
