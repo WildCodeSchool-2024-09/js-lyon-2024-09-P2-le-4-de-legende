@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./TeamStats.css";
-import leaguelogo from "../../../public/LigaLogo.png";
+import LeagueLogo from "../../../public/LigaLogo.png";
 
 const apiKey = import.meta.env.VITE_CLIENT_API_KEY_FOOT;
 
@@ -39,7 +39,7 @@ function TeamStats() {
     <>
       <div className="filtre">
         <div className="tabTittle">
-          <img className="LeagueLogo" src={leaguelogo} alt="logo du tableau" />
+          <img className="LeagueLogo" src={LeagueLogo} alt="logo du tableau" />
           <h1 id="title">Team Stats</h1>
         </div>
         <div className="back-select">

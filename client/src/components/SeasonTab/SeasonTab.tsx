@@ -1,6 +1,6 @@
 import "./SeasonTab.css";
 import { useEffect, useState } from "react";
-import leaguelogo from "../../../public/LigaLogo.png";
+import LeagueLogo from "../../../public/LigaLogo.png";
 
 
 interface Data {
@@ -52,7 +52,7 @@ function SeasonTab() {
     <section className="WrappingTabs">
       <div className="tabTittle">
         <div>
-          <img className="LeagueLogo" src={leaguelogo} alt="logo_league" />
+          <img className="LeagueLogo" src={LeagueLogo} alt="logo_league" />
         </div>
 
         <div className="wrapTittles">
