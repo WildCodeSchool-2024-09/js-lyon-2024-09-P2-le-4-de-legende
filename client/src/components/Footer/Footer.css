@@ -15,3 +15,8 @@ footer {
   margin-right: 10px;
   margin-left: 10px;
 }
+
+.footerDescription{
+  font-size: 0.8rem;
+  text-align: center;
+}

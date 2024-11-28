@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./TopScorer.css";
-import leaguelogo from "../../public/LiguaLogo.png";
+import LeagueLogo from "../../../public/LigaLogo.png";
 
 interface TopScorerProps {
   player_place: number;
@@ -13,7 +13,7 @@ interface TopScorerProps {
   penalty_goals?: number;
 }
 
-const apiKey = import.meta.env.VITE_CLIENT_API_KEY;
+const apiKey = import.meta.env.VITE_CLIENT_API_KEY_FOOT;
 
 export default function TopScorer() {
   const [scorers, setScorers] = useState<TopScorerProps[]>([]);
@@ -28,18 +28,23 @@ export default function TopScorer() {
         })
         .then((data) => {
           setScorers(data);
+        })
+        .catch((error) => {
+          console.error(error);
         });
     };
+
     getTopScorer();
-  }, [scorers]);
+  }, []);
+
   return (
-    <section className="WrappingTab">
+    <section className="WrappingTabs">
       <div className="tabTittle">
         <div>
-          <img className="LeagueLogo" src={leaguelogo} alt="logo du tableau" />
+          <img className="LeagueLogo" src={LeagueLogo} alt="logo du tableau" />
         </div>
         <div className="wrapTittles">
-          <p className="tabMainTittle">Laliga</p>
+          <p className="tabMainTittle">Liga</p>
           <p className="tabSubTittle">Spain</p>
         </div>
       </div>
