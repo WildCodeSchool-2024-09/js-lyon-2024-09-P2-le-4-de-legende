@@ -42,11 +42,11 @@ function League()
 
 
                     <div className="LeagueElements">
-                        {champ.length === 0  ? <p>loading </p> : <img id="logo" src={champ[1].league_logo} alt="img" />}
+                        {champ.length === 0  ? <p>loading </p> : <img id="logo" src={champ[0].league_logo} alt="img" />}
 
                         <div className="wrapDescription">
-                            {champ.length === 0  ? <p>loading </p> : <p className="description">{champ[1].league_name}</p>}
-                            {champ.length === 0 ? <p>loading </p> : <p className="description">{champ[1].league_season}</p>}
+                            {champ.length === 0  ? <p>loading </p> : <p className="description">{champ[0].league_name}</p>}
+                            {champ.length === 0 ? <p>loading </p> : <p className="description">{champ[0].league_season}</p>}
                         </div>
                     </div>
                 </div>
