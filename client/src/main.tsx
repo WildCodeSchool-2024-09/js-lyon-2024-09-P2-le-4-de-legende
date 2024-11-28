@@ -7,10 +7,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
-import NavBar from "./components/NavBar/NavBar";
-import League from "./components/League/League";
 import TopScorer from "./components/TopScorers/TopScorer";
-import Footer from "./components/Footer/Footer";
 import TeamStats from "./components/TeamStats/TeamStats";
 import SeasonTab from "./components/SeasonTab/SeasonTab";
 import LigaTV from "./components/LigaTV/LigaTV";

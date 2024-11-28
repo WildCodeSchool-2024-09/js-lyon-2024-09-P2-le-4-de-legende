@@ -1,5 +1,5 @@
 .WrappingTabs {
-  display: flex
+  display: flex;
   flex-direction: column;
   width: 80%;
   background-color: #2e3039;
@@ -60,14 +60,14 @@
 
 .menuContent2 {
   flex: 2 3 5rem;
-
   display: flex;
   align-items: center;
   height: 2rem;
   font-size: 0.7rem;
   color: white;
   border-radius: 10px;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+
 }
 
 .menuContent {
@@ -97,7 +97,8 @@
 }
 
 .TeamLogoInMenu {
-  width: 2vw;
+  width: 1rem;
+  margin-right: 9px;
 }
 
 @media screen and (max-width: 600px) {

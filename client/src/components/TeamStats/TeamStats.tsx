@@ -60,33 +60,48 @@ function TeamStats() {
                 alt="logo du club"
               />
               <div className="stats">
-                <p className="p-stats">
-                  Matchs joués:
-                  <span>{foot[footIndex].overall_league_payed}</span>
-                </p>
-                <p className="p-stats">
-                  Points:<span>{foot[footIndex].overall_league_PTS}</span>
-                </p>
-                <p className="p-stats">
-                  Wins:<span>{foot[footIndex].overall_league_W}</span>
-                </p>
-                <p className="p-stats">
-                  Defaites:<span>{foot[footIndex].overall_league_D}</span>
-                </p>
-                <p className="p-stats">
-                  Nul:<span>{foot[footIndex].overall_league_L}</span>
-                </p>
-                <p className="p-stats">
-                  Buts marqués:<span>{foot[footIndex].overall_league_GF}</span>
-                </p>
-                <p className="p-stats">
-                  Buts encaissés:
+                <div className="p-stats">
+                    <p>
+                      Matchs joués:
+                    </p>
+                    <span>{foot[footIndex].overall_league_payed}</span>
+                </div>
+
+                <div className="p-stats">
+                  <p>Points:</p>
+                  <span>{foot[footIndex].overall_league_PTS}</span>
+                </div>
+
+                <div className="p-stats">
+                  <p>Wins:</p>
+                  <span>{foot[footIndex].overall_league_W}</span>
+                </div>
+
+                <div className="p-stats">
+                  <p>Defaites:</p>
+                  <span>{foot[footIndex].overall_league_D}</span>
+                </div>
+
+                <div className="p-stats">
+                  <p> Nul:</p>
+                  <span>{foot[footIndex].overall_league_L}</span>
+                </div>
+
+                <div className="p-stats">
+                  <p> Buts marqués:</p>
+                  <span>{foot[footIndex].overall_league_GF}</span>
+                </div>
+                
+                <div className="p-stats">
+                  <p className="p-stats"> Buts encaissés: </p>
                   <span>{foot[footIndex].overall_league_GA}</span>
-                </p>
-                <p className="p-stats">
-                  Classements:
+                </div>
+               
+                <div className="p-stats">
+                  <p className="p-stats"> Classements: </p>
                   <span>{foot[footIndex].overall_league_position}</span>
-                </p>
+                </div>
+               
               </div>
             </div>
           </div>
