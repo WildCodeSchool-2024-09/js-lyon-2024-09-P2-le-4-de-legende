@@ -1,82 +1,90 @@
 .LeagueComponent {
-    display: flex;
-    justify-content: center;
-    gap: 9vw;
-    background-image :linear-gradient(rgba(255 255 255 / 18%), rgba(0 0 0 / 80%)), url("/stadium.png");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 40vh;
+  display: flex;
+  justify-content: center;
+  gap: 9vw;
+  background-image: linear-gradient(rgba(255 255 255 / 18%), rgba(0 0 0 / 80%)),
+    url("/stadium.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
 }
 
 .description {
-    font-size: 1.3rem;
-    font-family: "Arvo", serif;
-    font-weight: 600;
-    color: white;
+  font-size: 1.3rem;
+  font-family: "Arvo", serif;
+  font-weight: 600;
+  color: white;
 }
 
 .LeagueElements {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem 2rem 1rem 2rem;
-    background: rgba(0, 0, 0, 0.7);
-    border-bottom-left-radius: 13px;
-    border-bottom-right-radius: 13px;
-    
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem 1rem 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
 }
 
-#logo{
-    width: 4vw;
-    border-radius: 15%;
+#logo {
+  width: 4vw;
+  border-radius: 15%;
 }
 
-.TitleLeagueComponent{
-    font-weight: 600;
-    font-size: 1.9rem;
-    font-family: "Arvo", serif;
-    color: white;
+.TitleLeagueComponent {
+  font-weight: 600;
+  font-size: 1.9rem;
+  font-family: "Arvo", serif;
+  color: white;
 }
 
-.CommentLeagueComponent{
-    font-weight: 300;
-    font-size: 0.7rem;
-    font-family: "Poppins", serif;
-    color: white;
+.CommentLeagueComponent {
+  font-weight: 300;
+  font-size: 0.7rem;
+  font-family: "Poppins", serif;
+  color: white;
 }
 
-.WrapComponentLeague{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 2rem;
+.WrapComponentLeague {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 2rem;
 }
-.wrapLeagueCard{
-    display: flex;
-    padding-right: 2rem;
-}
-
-.LeagueCard{
-    display: flex;
-    flex-direction: column-reverse;
-    background: url(Footballer.png), linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 38, 1) 19%, rgba(255, 255, 255, 0.06908700980392157) 98%), rgb(2, 0, 36);
-    background-position: center;
-    background-size: cover;
-    margin: 1rem 0 1rem 0;
-    border-radius: 5%;
-    border: white 1px double;
-    background-clip: content-box;
+.wrapLeagueCard {
+  display: flex;
+  padding-right: 2rem;
 }
 
-.wrapDescription
-{
-    display: flex;
-    flex-direction: column;
+.LeagueCard {
+  display: flex;
+  flex-direction: column-reverse;
+  background: url(Footballer.png),
+    linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 38, 1) 19%,
+      rgba(255, 255, 255, 0.06908700980392157) 98%
+    ),
+    rgb(2, 0, 36);
+  background-position: center;
+  background-size: cover;
+  margin: 1rem 0 1rem 0;
+  border-radius: 5%;
+  border: white 1px double;
+  background-clip: content-box;
 }
 
-.imgNavbar{
-    width: 2vw;
+.wrapDescription {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .LeagueCard {
+    display: none;
+  }
 }

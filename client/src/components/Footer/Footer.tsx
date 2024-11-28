@@ -1,18 +1,18 @@
 import "./Footer.css";
-import logofooter from "../../../public/logo-footer.png";
+import LogoFooter from "../../../public/Logo-Footer.png";
 
 export default function Footer() {
   return (
     <footer>
       <div>
-        <img id="logofooter" src={logofooter} alt="logo du footer" />
+        <img id="logofooter" src={LogoFooter} alt="logo du footer" />
       </div>
 
       <div>
-        <p>Retrouvez-nous sur Instagram et tout le bordel</p>
+        <p className="footerDescription">Rejoignez-nous sur Instagram et suivez toute notre actualité</p>
       </div>
       <div>
-        <img id="logofooter" src={logofooter} alt="logo du footer" />
+        <img id="logofooter" src={LogoFooter} alt="logo du footer" />
       </div>
     </footer>
   );

@@ -7,12 +7,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
-import NavBar from "./components/NavBar/NavBar";
-import League from "./components/League/League";
 import TopScorer from "./components/TopScorers/TopScorer";
-import Footer from "./components/Footer/Footer";
 import TeamStats from "./components/TeamStats/TeamStats";
 import SeasonTab from "./components/SeasonTab/SeasonTab";
+import LigaTV from "./components/LigaTV/LigaTV";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -40,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/SeasonTab",
         element: <SeasonTab />,
+      },
+      {
+        path: "/ligaTV",
+        element: <LigaTV />,
       },
     ], // Renders the App component for the home page
   },
